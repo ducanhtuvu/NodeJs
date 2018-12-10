@@ -47,13 +47,13 @@ arr.forEach(function (element) {
       )
 
       //Task 3
-      element['update'] = format(element[`dateUpdated`], 'mm/dd/yyyy');
+      
+      element['update'] = format(element[`dateUpdated`], 'MM/dd/yyyy');
       delete element['dateUpdated'];
 
-      // console.log(`${numb} - ${name} - ${price}VND - Cập nhật cách đây: ${fromnow}`);
+      //console.log(`${numb} - ${name} - ${element['price']}VND - Cập nhật cách đây: ${fromnow}`);
       index++;
 });
-// console.log(arr);
 
 function createXLSX(objJson) {
       // create 'worksheet' object from json
@@ -74,4 +74,4 @@ function createXLSX(objJson) {
       })
 }
 
- createXLSX(arr);
+  createXLSX(arr);
